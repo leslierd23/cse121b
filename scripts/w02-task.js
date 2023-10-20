@@ -35,14 +35,16 @@ imageElement.setAttribute(`alt`, `Profile image of ${fullName}`);
 /* Step 5 - Array */
 
 let myFavFood =  [`Tacos`, `spaghetti`, `arroz`,`pozole`, 'tostadas', `charro beans`];
-const my2FavFood = [`churros`, `chocoflan`];
+foodElement.textContent = myFavFood;
+const my2FavFood = [`churros`];
 myFavFood.push(my2FavFood);
 foodElement.innerHTML += `<br>${myFavFood}`;
-let removeFirst = myFavFood.shift();
-myFavFood.push(my2FavFood);
+myFavFood.shift();
 foodElement.innerHTML += `<br>${myFavFood}`;
-myFavFood.pop();
-myFavFood.push(my2FavFood);
+myFavFood.pop(my2FavFood);
+foodElement.innerHTML += `<br>${myFavFood}`;
+//myFavFood.pop();
+//foodElement.innerHTML += `<br>${myFavFood}`;
 
 
 
