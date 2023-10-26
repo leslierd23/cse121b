@@ -11,7 +11,6 @@ async function randomAnswer(){
 
 }
  
-
 async function getRanAnsw(randomOpt){
 
     let apiResponse = await fetch('https://api.adviceslip.com/advice/search/love')

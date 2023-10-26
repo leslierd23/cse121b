@@ -3,5 +3,5 @@ export async function getRanAnsw(randomOpt){
     {cache:"default"})
     .then(function(response){
         let raData = await.response.json()
-    })
-}
+    });
+};
