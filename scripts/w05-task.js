@@ -28,39 +28,18 @@ const getTemples = async ()=>{
    templeList= await response.json();
    displayTemples(templeList);
 }
-
+ 
 
 /* reset Function */
 function reset(){
-    templesElement.innerHTML=``;
+    
 
 } 
 
 /* sortBy Function */
-function sortBy = (tempples)=> {
-    reset();
-    const filter = document.querySelector('#sortBy').value;
-    switch(filter){
-        case 'utah';
-        displayTemples(temple.filter(temple => temple.location.includes(`Utah`)));
-        break;
-        case 'NotUtah':
-            displayTemples(temples.filter(temple => ! temple.location.includes('NotUtah')));
-            break;
-        case 'older':
-            displayTemples(temples.filter(temple => new Date(temple.dedicated)< new Date(1950,1,1)));
-            break;
-        case 'all':
-            default:
-                displayTemples(temples);
-                break;
-    }
 
-
-}
 
 
 getTemples();
 
 /* Event Listener */
-document.querySelector('#sortBy').addEventListener("change", ()=>{sortBy(templeList)});
